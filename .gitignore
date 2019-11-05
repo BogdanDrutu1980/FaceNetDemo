@@ -1,0 +1,3 @@
+/05_DjangoWebProject/env/*
+/05_DjangoWebProject/obj/*
+/05_DjangoWebProject/**/*.pyc
