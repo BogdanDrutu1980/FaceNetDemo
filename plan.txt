@@ -1,2 +1,7 @@
-Remove dependencies to Visual Studio project in order to be a simple Django application
-Deploy to Azure Cloud - first draft version
+1. Remove dependencies to Visual Studio project in order to be a simple Django application
+2. Deploy to Azure Cloud - first draft version
+3. Clean up unused web pages
+4. Update predict.html to make a prediction
+5. Big task --> solution to continuosly update the dataset and model
+
+
