@@ -1,0 +1,2 @@
+Remove dependencies to Visual Studio project in order to be a simple Django application
+Deploy to Azure Cloud - first draft version
