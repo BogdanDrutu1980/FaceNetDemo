@@ -6,5 +6,6 @@ In parallel can be done:
 4. Clean up unused web pages
 5. Update predict.html to make a prediction
 6. Big task --> solution to continuosly update the dataset and model
+   a) 1st solution: using public API of social networks (facebook) - gather some public photos and real name (to be checked if its possible and legal). In this case tha dataset can be updated with people from specific area
 
 
