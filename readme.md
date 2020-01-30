@@ -9,6 +9,8 @@ It was created to learn:
 TBD
 
 It can be combined (merged) with what is intended to develop in RoadTraffic:
-Scenario:
+Scenario 1:
 The system developed in RoadTraffic will send images to FaceNetDemo for person recognition.
+Scenario 2:
+Draft idea: a drone system - using the same board -nVidia
 
