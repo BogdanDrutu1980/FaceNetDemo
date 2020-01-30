@@ -8,3 +8,7 @@ It was created to learn:
 
 TBD
 
+It can be combined (merged) with what is intended to develop in RoadTraffic:
+Scenario:
+The system developed in RoadTraffic will send images to FaceNetDemo for person recognition.
+
