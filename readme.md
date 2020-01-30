@@ -10,7 +10,8 @@ TBD
 
 It can be combined (merged) with what is intended to develop in RoadTraffic:
 Scenario 1:
-The system developed in RoadTraffic will send images to FaceNetDemo for person recognition.
+The system developed in RoadTraffic will send images to FaceNetDemo for person recognition
 Scenario 2:
 Draft idea: a drone system - using the same board -nVidia
+For the above scenarios we need a very big dataset for a specific area.
 
