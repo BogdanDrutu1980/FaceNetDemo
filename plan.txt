@@ -1,5 +1,5 @@
 1. Remove dependencies to Visual Studio project in order to be a simple Django application - done
-2. Test if the application its working localy after removing dependencies
+2. Test if the application its working localy after removing dependencies - not working -> debug why
 3. Deploy to Azure Cloud - first draft version
 
 In parallel can be done:
