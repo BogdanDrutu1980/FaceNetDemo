@@ -11,3 +11,5 @@ In parallel can be done:
    a) 1st solution: using public API of social networks (facebook) - gather some public photos and real name (to be checked if its possible and legal). In this case the dataset can be updated with people from specific area
 
 
+High prio task:
+Topic 2 - deadline: 2 Feb 2020
