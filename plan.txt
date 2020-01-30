@@ -17,3 +17,6 @@ Topic 2 - deadline: 2 Feb 2020
 First problem: incompatibility between python packages after updating to tensorflow 15.0.2 -> requirements.txt
 The environment exported from Visual Studio -> requirements.txt its not working anymore. 
 How to fix it???
+It is a nightmare :-)
+Possible solution: setup django and all packages one by one and after -> export a new environment
+
