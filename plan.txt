@@ -5,6 +5,7 @@
    b) create django application (dependent of point 2) 
 4. A paper/article shall be written about Face Recognition - Iulia, Bogdan - deadline end of Feb
 https://en.wikipedia.org/wiki/Facial_recognition_system - starting point
+https://theconversation.com/facial-recognition-research-reveals-new-abilities-of-super-recognisers-128414
 
 In parallel can be done:
 4. Clean up unused web pages
