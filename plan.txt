@@ -23,3 +23,9 @@ How to fix it???
 It is a nightmare :-)
 Possible solution: setup django and all packages one by one and after -> export a new environment
 
+References for django:
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website
+https://docs.djangoproject.com/en/3.0/intro/tutorial01/
+
+
+
