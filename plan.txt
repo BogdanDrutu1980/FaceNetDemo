@@ -31,7 +31,7 @@ https://realpython.com/django-setup/
 
 02.Feb.2020
 Related somehow with Facial Recognition article (also for a future drone project)
-Omniscient serial on Netflix - a justice/safety system based on drones - each person has a dedicated drone - very interesting
+Omniscient serial on Netflix - a safety and intimacy system based on drones - each person has a dedicated drone - very interesting
 
 
 
