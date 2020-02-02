@@ -6,9 +6,10 @@
 4. A paper/article shall be written about Face Recognition - Iulia, Bogdan - deadline end of Feb
 https://en.wikipedia.org/wiki/Facial_recognition_system - starting point
 https://theconversation.com/facial-recognition-research-reveals-new-abilities-of-super-recognisers-128414
+https://www.forbes.com/sites/bethkindig/2020/01/31/5-soon-t0-be-trends-in-artificial-intelligence-and-deep-learning/#231f79b35e56
 
 In parallel can be done:
-4. Clean up unused web pages
+4. Clean up unused web pages - done
 5. Update predict.html to make a prediction
 6. Big task --> solution to continuosly update the dataset and model
    a) 1st solution: using public API of social networks (facebook) - gather some public photos and real name (to be checked if its possible and legal). In this case the dataset can be updated with people from specific area
