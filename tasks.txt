@@ -1,2 +1,0 @@
-03.Feb.2020
-1. Add one by one all the required libraries by models.py - Bogdan
