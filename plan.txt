@@ -34,5 +34,8 @@ https://realpython.com/django-setup/
 Related somehow with Facial Recognition article (also for a future drone project)
 Omniscient serial on Netflix - a safety and intimacy system based on drones - each person has a dedicated drone - very interesting
 
+03.Feb.2020
+- Update models.py step by step to integrate all dependencies for Face Detection - Bogdan
+
 
 
