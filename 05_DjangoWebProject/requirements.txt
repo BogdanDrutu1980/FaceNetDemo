@@ -1,1 +1,1 @@
-To be re-created
+Django==3.02
