@@ -8,6 +8,24 @@ from django.contrib.staticfiles.storage import staticfiles_storage
 from random import choice
 import os
 from PIL import Image
+from numpy import asarray
+from mtcnn.mtcnn import MTCNN
+from os import listdir
+from matplotlib import pyplot
+from os.path import isdir
+import numpy as np
+from numpy import load
+from numpy import expand_dims
+from numpy import asarray
+from numpy import savez_compressed
+from keras.models import load_model
+from random import choice
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import Normalizer
+from sklearn.svm import SVC
+import os
+
+
 from django.conf import settings
 # Create your models here.
 
