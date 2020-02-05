@@ -75,7 +75,7 @@ def predict(request):
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
-            #form.save()
+            form.save()
             f = Face()
         return render(
             request,
@@ -87,7 +87,7 @@ def predict(request):
             }
         )
     
-    #form = UploadFileForm()
+    form = UploadFileForm()
     return render(request, 'app/predict.html', {}
     )
 
