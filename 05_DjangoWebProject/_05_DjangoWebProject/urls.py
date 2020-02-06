@@ -16,6 +16,7 @@ urlpatterns = [
     path('update/', views.update, name='update'),
     path('predict/', views.predict, name='predict'),
     path('about/', views.about, name='about'),
+    path('init/', views.init, name='init'),
     path('login/',
          LoginView.as_view
          (

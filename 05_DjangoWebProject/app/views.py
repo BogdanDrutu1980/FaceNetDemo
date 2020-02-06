@@ -21,6 +21,20 @@ def home(request):
             'year':datetime.now().year,
         }
     )
+def init(request):
+    """Renders the init page (button)."""
+    assert isinstance(request, HttpRequest)
+    fa = Face()
+    return render(
+        request,
+        'app/init.html',
+        {
+            'title':'Init  Page',
+            'year':datetime.now().year,
+        }
+    )
+
+
 
 def update(request):
     """Renders the contact page."""
@@ -77,13 +91,13 @@ def predict(request):
         #form = UploadFileForm(request.POST, request.FILES)
         #if form.is_valid():
             #form.save()
-        
-        uploaded_file = request.FILES['document']    
+
+        uploaded_file = request.FILES['document']
         print(uploaded_file.name)
         fs = FileSystemStorage()
         fs.save(uploaded_file.name, uploaded_file)
         f = Face()
-        
+
         return render(
             request,
             'app/predict.html',
@@ -93,8 +107,7 @@ def predict(request):
                 'year':datetime.now().year,
             }
         )
-    
-    
+
+
     return render(request, 'app/predict.html', {}
     )
-
