@@ -73,13 +73,17 @@ def predict(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
     if request.method == 'POST':
-        form = UploadFileForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            f = Face()
+        #form = UploadFileForm(request.POST, request.FILES)
+        #if form.is_valid():
+            #form.save()
+        
+        uploaded_file = request.FILES['document']    
+        print(uploaded_file.name)
+        f = Face()
+        
         return render(
             request,
-            'app/prediction.html',
+            'app/predict.html',
             {
                 'title':'About',
                 'mess':f.getName(),
@@ -87,7 +91,7 @@ def predict(request):
             }
         )
     
-    form = UploadFileForm()
+    
     return render(request, 'app/predict.html', {}
     )
 
