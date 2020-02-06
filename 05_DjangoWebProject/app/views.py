@@ -8,6 +8,7 @@ from django.http import HttpRequest
 
 from app.models import Face
 from django.contrib.staticfiles.storage import staticfiles_storage
+from django.core.files.storage import FileSystemStorage
 
 def home(request):
     """Renders the home page."""
@@ -79,6 +80,8 @@ def predict(request):
         
         uploaded_file = request.FILES['document']    
         print(uploaded_file.name)
+        fs = FileSystemStorage()
+        fs.save(uploaded_file.name, uploaded_file)
         f = Face()
         
         return render(
