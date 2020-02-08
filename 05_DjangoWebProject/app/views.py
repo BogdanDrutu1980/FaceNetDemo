@@ -10,6 +10,8 @@ from app.models import Face
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.core.files.storage import FileSystemStorage
 
+fa = None
+
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
@@ -24,6 +26,7 @@ def home(request):
 def init(request):
     """Renders the init page (button)."""
     assert isinstance(request, HttpRequest)
+    global fa
     fa = Face()
     return render(
         request,
@@ -66,22 +69,18 @@ def predict(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
     if request.method == 'POST':
-        #form = UploadFileForm(request.POST, request.FILES)
-        #if form.is_valid():
-            #form.save()
-
         uploaded_file = request.FILES['document']
         print(uploaded_file.name)
         fs = FileSystemStorage()
         fs.save(uploaded_file.name, uploaded_file)
-        f = Face()
-
+        if fa != None:
+            print(fa.getName())
         return render(
             request,
-            'app/predict.html',
+            'app/prediction.html',
             {
                 'title':'About',
-                'mess':f.getName(),
+                'mess':fa.getName(),
                 'year':datetime.now().year,
             }
         )
