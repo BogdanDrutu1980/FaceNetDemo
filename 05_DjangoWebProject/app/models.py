@@ -185,6 +185,7 @@ class Face(models.Model):
         #rec.fit()
         #self.name, self.probability = rec.predict(os.path.join(settings.MEDIA_ROOT, 'documents/test.png'))
         self.name = "test"
+    
     def getName(self):
         return self.name
     def handle_uploaded_file(f):

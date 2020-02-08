@@ -34,7 +34,11 @@
 							</div>
 							<button type="submit" class="btn btn-default">Upload data</button>
 						</form>
-					</article>
+					{% if url %}
+                        <p>Uploaded file: <a href="{{ url }}">{{ url }}</a></p>
+                    {% endif %}
+
+                    </article>
 		</div>
 	
     </div>

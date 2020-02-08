@@ -68,21 +68,17 @@ def about(request):
 def predict(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
+    context = {}
     if request.method == 'POST':
         uploaded_file = request.FILES['document']
         print(uploaded_file.name)
         fs = FileSystemStorage()
-        fs.save(uploaded_file.name, uploaded_file)
-        if fa != None:
-            print(fa.getName())
+        name = fs.save(uploaded_file.name, uploaded_file)
+        context['url'] = fs.url(name)
         return render(
             request,
-            'app/prediction.html',
-            {
-                'title':'About',
-                'mess':fa.getName(),
-                'year':datetime.now().year,
-            }
+            'app/predict.html',
+            context
         )
 
 
