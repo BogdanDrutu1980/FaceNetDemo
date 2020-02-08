@@ -62,28 +62,6 @@ def about(request):
         }
     )
 
-def upload(request):
-    #if request.method == 'POST':
-    #    form = DocumentForm(request.POST, request.FILES)
-    #    if form.is_valid():
-    #        form.save()
-    #        f = Face()
-    #    return render(
-    #        request,
-    #        'app/prediction.html',
-    #        {
-    #            'title':'About',
-    #            'mess':f.getName(),
-    #            'year':datetime.now().year,
-    #        }
-    #    )
-    #else:
-    #    form = DocumentForm()
-    #return render(request, 'app/model_form_upload.html', {
-    #    'form': form
-    #})
-    pass
-
 def predict(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
