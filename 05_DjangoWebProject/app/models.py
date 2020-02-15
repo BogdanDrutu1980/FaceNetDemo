@@ -49,6 +49,9 @@ class FaceEmbeddings:
         self.facesLoaded=True
         return self.faces,self.labels
 
+    def getInitFaces(self,directory):
+        pass
+
 
     def getFace(self,filename):
         # load image from file
@@ -114,6 +117,8 @@ class Recognizer:
         self.trainX, self.trainy, self.testX, self.testy = data['arr_0'], data['arr_1'], data['arr_2'], data['arr_3']
 
         self.dsLoaded = True
+
+
     def updateDataset(self,directory):
         if self.dsLoaded and self.embeddingsModelLoaded:
             fa = FaceEmbeddings(self.modelEmbeddings)
@@ -126,6 +131,20 @@ class Recognizer:
             self.trainX = np.concatenate((self.trainX,new_x_train), axis=0)
             self.trainy = np.concatenate((self.trainy,new_y_train), axis=0)
             savez_compressed(self.filename,self.trainX, self.trainy, self.testX, self.testy)
+     
+    def initDataset(self, dir_train, dir_val):
+        fa = FaceEmbeddings(self.modelEmbeddings)    
+        self.trainX,self.trainy=fa.getInitFaces(dir_train)
+        self.trainX=fa.getSetEmbeddings()
+        self.trainX.reshape(-1, 1)
+        self.trainy.reshape(-1, 1)
+
+        self.testX,self.testy=fa.getInitFaces(dir_val)
+        self.testX=fa.getSetEmbeddings()
+        self.testX.reshape(-1, 1)
+        self.testy.reshape(-1, 1)
+
+        savez_compressed(self.filename,self.trainX, self.trainy, self.testX, self.testy)
 
 
     def loadEmbeddingsModel(self, model):
@@ -181,6 +200,8 @@ class Face(models.Model):
     def __init__(self):
         rec = Recognizer()
         rec.loadEmbeddingsModel(os.path.join(settings.STATIC_ROOT, 'facenet_keras.h5'))
+        rec.initDataset(os.path.join(settings.STATIC_ROOT, 'train'),os.path.join(settings.STATIC_ROOT, 'val'))
+
         #rec.loadDataset(os.path.join(settings.STATIC_ROOT, '5-celebrity-faces-embeddings.npz'))
         #rec.fit()
         #self.name, self.probability = rec.predict(os.path.join(settings.MEDIA_ROOT, 'documents/test.png'))
@@ -188,5 +209,6 @@ class Face(models.Model):
     
     def getName(self):
         return self.name
-    def handle_uploaded_file(f):
+    def create_init_dataset(self):
+
         pass
