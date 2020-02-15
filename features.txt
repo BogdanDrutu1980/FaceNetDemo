@@ -1,3 +1,0 @@
-Place for new features
-
-To be used together with a drone system? - start to read about ROS and drones
